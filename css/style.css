@@ -1,0 +1,689 @@
+:root {
+    --purple: #0877b9;
+    --purple-dark: #123b60;
+    --purple-light: #e6f4fa;
+    --lavender: #f3fafc;
+
+    --text: #173b59;
+    --muted: #667f91;
+    --border: #d8eaf1;
+    --white: #fff;
+
+    --green: #dff6e9;
+    --green-text: #187348;
+
+    --yellow: #fff1d1;
+    --yellow-text: #9a6500;
+
+    --red: #ffe4eb;
+    --red-text: #c62e49;
+
+    --blue: #e3efff;
+    --blue-text: #235ec8;
+
+    --shadow: 0 10px 30px rgba(12, 91, 130, 0.08);
+}
+
+
+/* =========================================
+   2. General Styles
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: inherit;
+    color: var(--text);
+    background: linear-gradient(135deg, #ffffff, #f0f8fb);
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================================
+   3. Main Layout
+   ========================================= */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+}
+
+.content {
+    padding: 30px 34px 42px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+/* =========================================
+========================================= 
+========================================= 
+========================================= 
+   4. Sidebar and Navigation
+   ========================================= 
+   ========================================= 
+   ========================================= 
+   ========================================= */
+
+.sidebar {
+    width: 245px;
+    flex-shrink: 0;
+
+    background: linear-gradient(180deg, #e7f5fa, #f5fbfd);
+
+    padding: 28px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-right: 1px solid #d5eaf2;
+}
+
+.brand {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--purple-dark);
+    line-height: 1.3;
+    margin: 0 0 42px;
+}
+
+.brand-icon {
+    font-size: 35px;
+    display: block;
+    color: var(--purple);
+    margin-bottom: 8px;
+}
+
+.nav {
+    display: grid;
+    gap: 8px;
+}
+
+.nav a {
+    padding: 13px 15px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-weight: 600;
+    color: #174b70;
+}
+
+.nav a:hover,
+.nav a.active {
+    background: #d2edf6;
+}
+
+/* =========================================
+   5. Top Bar and Admin Profile
+   ========================================= */
+
+.topbar {
+    height: 78px;
+    padding: 16px 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+
+    border-bottom: 1px solid #dcecf2;
+    background: #ffffff8c;
+}
+
+.top-search {
+    max-width: 390px;
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: white;
+    color: var(--muted);
+}
+
+.admin-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 700;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background: #168bb9;
+    color: white;
+
+    display: inline-grid;
+    place-items: center;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   6. Page Headings
+   ========================================= */
+
+.eyebrow {
+    color: #168bb9;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.page-heading h1 {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    color: #123b60;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0 18px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    margin: 0;
+}
+
+
+/* =========================================
+   7. Buttons
+   ========================================= */
+
+.btn {
+    display: inline-block;
+
+    border: 0;
+    border-radius: 11px;
+    padding: 12px 19px;
+
+    background: var(--purple);
+    color: white;
+
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #075f94;
+}
+
+.btn-light {
+    background: var(--purple-light);
+    color: var(--purple-dark);
+}
+
+/* =========================================
+   8. Cards
+   ========================================= */
+
+.card {
+    background: #fff;
+
+    border: 1px solid #e1eef3;
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   9. Toolbar, Fields and Filters
+   ========================================= */
+
+.toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.field {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #d2e5ed;
+    border-radius: 10px;
+
+    background: #fff;
+    color: var(--text);
+
+    outline: none;
+}
+
+.field:focus {
+    border-color: #168bb9;
+}
+
+.search-field {
+    max-width: 370px;
+}
+
+.filter {
+    min-width: 150px;
+}
+
+
+/* =========================================
+   10. Tables
+   ========================================= */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 720px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px 12px;
+
+    border-bottom: 1px solid #e5eff3;
+
+    vertical-align: middle;
+}
+
+th {
+    font-size: 13px;
+    color: #174b70;
+    background: #f3fafc;
+}
+
+td {
+    font-size: 14px;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+.event-name {
+    font-weight: 700;
+    color: #123b60;
+}
+
+/* =========================================
+   11. Status Badges
+   ========================================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 6px 11px;
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.published,
+.active-status {
+    background: var(--green);
+    color: var(--green-text);
+}
+
+.draft,
+.pending {
+    background: var(--yellow);
+    color: var(--yellow-text);
+}
+
+.inactive,
+.cancelled {
+    background: var(--red);
+    color: var(--red-text);
+}
+
+.participant {
+    background: var(--blue);
+    color: var(--blue-text);
+}
+
+.admin-role {
+    background: #e2f2f8;
+    color: #0877b9;
+}
+
+
+/* =========================================
+   12. Statistics Cards
+   ========================================= */
+
+/* =========================================
+   13. Events Section
+   ========================================= */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.event-art {
+    height: 135px;
+
+    display: grid;
+    place-items: center;
+
+    background: linear-gradient(135deg, #d9eff8, #e8f8f8);
+
+    font-size: 48px;
+}
+
+.event-body {
+    padding: 19px;
+}
+
+.event-body h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.event-body p {
+    margin: 0 0 13px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================
+   14. Hero Section
+   ========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+    gap: 30px;
+
+    padding: 38px 4px 42px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 4.2vw, 58px);
+    line-height: 1.07;
+
+    margin: 8px 0 18px;
+
+    color: #123b60;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #557b90;
+    max-width: 500px;
+}
+
+.hero-art {
+    min-height: 300px;
+
+    border-radius: 45% 18px 18px 45%;
+
+    background: linear-gradient(145deg, #d8edf8, #e4f6f5);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 110px;
+}
+
+
+/* =========================================
+   15. Forms
+   ========================================= */
+
+/* =========================================
+   16. Login Page
+   ========================================= */
+
+.login-wrap {
+    max-width: 520px;
+    margin: 30px auto;
+}
+
+/* =========================================
+   17. Notice and Footer
+   ========================================= */
+
+/* =========================================
+   18. Home Page Announcements
+   ========================================= */
+
+.home-announcements {
+    margin-top: 34px;
+}
+
+.announcement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.announcement-card h3 {
+    font-size: 17px;
+    margin: 14px 0 8px;
+}
+
+.announcement-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 12px;
+}
+
+.home-announcements .section-title {
+    margin-bottom: 14px;
+}
+
+
+/* =========================================
+   19. Responsive Design: Tablets
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 205px;
+    }
+
+    .content {
+        padding: 24px 20px;
+    }
+
+    .topbar {
+        padding: 14px 20px;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-art {
+        min-height: 210px;
+    }
+
+    .announcement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   20. Responsive Design: Mobile Phones
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 14px;
+        display: block;
+    }
+
+    .brand {
+        font-size: 18px;
+        margin: 0 0 12px;
+    }
+
+    .brand-icon {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        overflow-x: auto;
+        gap: 5px;
+    }
+
+    .nav a {
+        white-space: nowrap;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .topbar {
+        height: auto;
+        padding: 12px;
+    }
+
+    .top-search {
+        max-width: none;
+    }
+
+    .admin-pill {
+        display: none;
+    }
+
+    .content {
+        padding: 22px 14px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats,
+    .event-grid,
+    .hero {
+        padding: 20px 0;
+    }
+
+    .hero-art {
+        font-size: 75px;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    .section-title h2 {
+        font-size: 23px;
+    }
+
+    .announcement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
