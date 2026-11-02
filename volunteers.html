@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Volunteers | Campus Event (LIMU)</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+         <aside class="sidebar">
+
+            <!-- Website Logo and Name -->
+            <div class="brand">
+                Campus Event<br>
+                (LIMU)
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav">
+
+                <a href="event-management.html">
+                    Events Management
+                </a>
+
+                <a class="active"  href="volunteers.html">
+
+                    Volunteers
+                </a>
+
+                <a href="users.html">
+                    Users Management
+                </a>
+
+                <a href="announcements.html">
+                    Announcements Management
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div class="admin-pill">
+                    <span class="avatar">A</span>
+                    Admin
+                </div>
+
+            </header>
+
+
+            <!-- Page Content -->
+            <div class="content">
+
+                <!-- Page Heading -->
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">VOLUNTEER MANAGEMENT</p>
+
+                        <h1>Volunteers</h1>
+
+                        <p>View volunteers registered for each event.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Volunteers Card -->
+                <div class="card">
+                        <select
+                            class="field filter"
+                            aria-label="Filter by event"
+                        >
+                            <option>All Events</option>
+                            <option>Web Development Workshop</option>
+                            <option>Career Guidance Seminar</option>
+                            <option>Campus Clubs Fair</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Volunteers Table -->
+<div class="table-wrap">
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Student ID</th>
+                <th>Event</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <!-- Volunteer 1 -->
+            <tr>
+                <td>1</td>
+                <td>Sara Ali</td>
+                <td>20231234</td>
+                <td>Web Development Workshop</td>
+                <td>sara@limu.edu.ly</td>
+
+                <td>
+                    <span class="badge draft">Pending</span>
+                </td>
+
+                <td>
+                    <button class="btn accept-btn" type="button">
+                        Accept
+                    </button>
+
+                    <button class="btn reject-btn" type="button">
+                        Reject
+                    </button>
+                </td>
+            </tr>
+
+            <!-- Volunteer 2 -->
+            <tr>
+                <td>2</td>
+                <td>Mohamed Ahmed</td>
+                <td>20231001</td>
+                <td>Career Guidance Seminar</td>
+                <td>mohamed@limu.edu.ly</td>
+
+                <td>
+                    <span class="badge draft">Pending</span>
+                </td>
+
+                <td>
+                    <button class="btn accept-btn" type="button">
+                        Accept
+                    </button>
+
+                    <button class="btn reject-btn" type="button">
+                        Reject
+                    </button>
+                </td>
+            </tr>
+
+            <!-- Volunteer 3 -->
+            <tr>
+                <td>3</td>
+                <td>Lana Mohamed</td>
+                <td>20231567</td>
+                <td>Campus Clubs Fair</td>
+                <td>lana@limu.edu.ly</td>
+
+                <td>
+                    <span class="badge draft">Pending</span>
+                </td>
+
+                <td>
+                    <button class="btn accept-btn" type="button">
+                        Accept
+                    </button>
+
+                    <button class="btn reject-btn" type="button">
+                        Reject
+                    </button>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+                © Campus Event (LIMU) 
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
